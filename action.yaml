@@ -60,14 +60,14 @@ runs:
   using: composite
   steps:
     - name: Configure Ruby
-      if: ${{ inputs.is_not_act }}
+      if: ${{ inputs.is_not_act == true }}
       uses: ruby/setup-ruby@a2bbe5b1b236842c1cb7dd11e8e3b51e0a616acc # v1.202.0
       with:
         ruby-version: '3.3.5'
         bundler-cache: true
 
     - name: Install Fastlane
-      if: ${{ inputs.is_not_act }}
+      if: ${{ inputs.is_not_act == true }}
       shell: bash
       run: |
         gem install bundler:2.2.27
