@@ -57,6 +57,7 @@ runs:
     - name: Configure Ruby
       uses: ruby/setup-ruby@a2bbe5b1b236842c1cb7dd11e8e3b51e0a616acc # v1.202.0
       with:
+        ruby-version: '3.3.5'
         bundler-cache: true
 
     - name: Install Fastlane
